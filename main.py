@@ -22,7 +22,7 @@ def main() -> None:
                     "description":
                         player_data.get("guild").get("description", None)}
             )
-        if player_data.get("race").get("skills"):
+        if race_data.get("skills"):
             for skill_data in (race_data.get("skills") or []):
                 skill, created = Skill.objects.get_or_create(
                     name=skill_data.get("name"), defaults={
